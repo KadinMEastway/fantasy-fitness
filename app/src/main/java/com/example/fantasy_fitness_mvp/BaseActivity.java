@@ -1,0 +1,13 @@
+package com.example.fantasy_fitness_mvp;
+
+import android.app.Activity;
+import android.os.Bundle;
+
+public abstract class BaseActivity extends Activity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(getLayoutResourceId());
+    }
+    protected abstract int getLayoutResourceId();
+}

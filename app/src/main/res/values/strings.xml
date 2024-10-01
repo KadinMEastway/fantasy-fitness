@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Fantasy-Fitness-MVP</string>
+    <string name="text_username">Username</string>
+    <string name="text_pwd">Password</string>
+    <string name="button_login">Login</string>
+    <string name="button_new_exercise">New Exercise</string>
+    <string-array name="exercise_types">
+        <item>Run</item>
+        <item>Weight Training</item>
+        <item>Calisthenics</item>
+        <item>Swim</item>
+    </string-array>
 </resources>

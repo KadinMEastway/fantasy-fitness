@@ -10,6 +10,7 @@ android {
         applicationId = "com.example.fantasy_fitness_mvp"
         minSdk = 24
         targetSdk = 34
+        vectorDrawables.useSupportLibrary = true
         versionCode = 1
         versionName = "1.0"
 

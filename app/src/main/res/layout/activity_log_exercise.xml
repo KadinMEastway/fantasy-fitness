@@ -6,16 +6,26 @@
     android:layout_height="match_parent"
     android:padding="40dp">
 
+
+    <ImageView
+        android:id="@+id/runIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:contentDescription="@string/run_icon_desc"
+        android:src="@drawable/baseline_run_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:labelFor="@+id/inputName"
         android:text="@string/name"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="@+id/inputName"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/runIcon" />
 
     <EditText
         android:id="@+id/inputName"
@@ -76,6 +86,7 @@
         android:id="@+id/buttonCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickCancel"
         android:text="@string/cancel"
         app:layout_constraintStart_toStartOf="@id/inputTime"
         app:layout_constraintTop_toBottomOf="@+id/inputTime" />
@@ -84,8 +95,20 @@
         android:id="@+id/buttonDone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onClickDone"
         android:text="@string/done"
         app:layout_constraintEnd_toEndOf="@id/inputTime"
         app:layout_constraintTop_toBottomOf="@+id/inputTime" />
+
+<!--    TODO: implement this in place of inputType-->
+<!--    <Spinner-->
+<!--        android:id="@+id/spinnerType"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:entries="@array/exercise_types"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

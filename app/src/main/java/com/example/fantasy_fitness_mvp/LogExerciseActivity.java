@@ -9,6 +9,7 @@ public class LogExerciseActivity extends BaseActivity {
     private EditText nameInput;
     private EditText typeInput;
     private EditText timeInput;
+    private Bundle extras;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,8 @@ public class LogExerciseActivity extends BaseActivity {
         nameInput = findViewById(R.id.inputName);
         typeInput = findViewById(R.id.inputType);
         timeInput = findViewById(R.id.inputTime);
+
+        extras = getIntent().getExtras();
     }
 
     @Override
@@ -31,6 +34,7 @@ public class LogExerciseActivity extends BaseActivity {
      */
     public void onClickCancel(android.view.View view) {
         Intent intent = new Intent(this, HomeActivity.class);
+        intent.putExtras(extras);
         startActivity(intent);
     }
 
@@ -43,6 +47,8 @@ public class LogExerciseActivity extends BaseActivity {
     public void onClickDone(android.view.View view) {
         if(validateExercise()) {
             Intent intent = new Intent(this, HomeActivity.class);
+            intent.putExtras(extras);
+            // TODO: create exercise class, and pass an instance along with user in intent extras.
             startActivity(intent);
         }
     }

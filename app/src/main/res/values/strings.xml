@@ -9,8 +9,10 @@
     <string name="name">Name</string>
     <string name="new_exercise">New Exercise</string>
     <string name="pwd">Password</string>
+    <string name="run_icon_desc">Run exercise icon</string>
     <string name="time">Time</string>
     <string name="type">Type</string>
+    <string name="user_icon_desc">User profile icon</string>
     <string name="username">Username</string>
     <string-array name="exercise_types">
         <item>Run</item>
